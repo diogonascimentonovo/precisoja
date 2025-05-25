@@ -24,3 +24,4 @@ async def recomendar_servicos(body: TextoBusca):
         "texto_original": body.texto,
         "exemplo_resposta": ["Consultoria Empresarial", "Financeiro e Contábil"]
     }
+#novatentativadedeploy
