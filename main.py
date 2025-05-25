@@ -20,3 +20,4 @@ class TextoBusca(BaseModel):
 async def recomendar_servicos(body: TextoBusca):
     print(f"Usuário buscou por: {body.texto}")
     return {"status": "recebido", "eco": body.texto}
+#comentário
