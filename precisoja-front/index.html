@@ -24,6 +24,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m0 0a7 7 0 10-10 0 7 7 0 0010 0z"/></svg>
           </button>
         </div>
+        <!-- Container para resultados da busca -->
+        <div id="search-results" class="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
       <div class="absolute inset-x-0 bottom-8 flex flex-col items-center space-y-2 animate-bounce text-gray-300 z-30">
         <span class="font-semibold">Role para ver todas as categorias</span>
@@ -32,79 +34,54 @@
     </section>
 
     <section id="categories" class="py-16 px-4 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-gray-900">
-  <a href="/categoria/administracao" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Administração de Imóveis</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/advocacia" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Advocacia</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/aulas" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Aulas Particulares</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/automacao" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Automação Residencial</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/beleza" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Beleza e Estética</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/consultoria" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Consultoria Empresarial</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/construcao" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Construção e Reforma</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/conteudo" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Criação de Conteúdo</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/design" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Design Gráfico</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/eventos" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Eventos</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/financeiro" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Financeiro e Contábil</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-<a href="/categoria/software" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
-  <span>Desenvolvimento de Software</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</a>
-
+      <a href="/categoria/administracao" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Administração de Imóveis</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/advocacia" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Advocacia</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/aulas" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Aulas Particulares</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/automacao" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Automação Residencial</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/beleza" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Beleza e Estética</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/consultoria" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Consultoria Empresarial</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/construcao" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Construção e Reforma</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/conteudo" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Criação de Conteúdo</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/design" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Design Gráfico</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/eventos" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Eventos</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/financeiro" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Financeiro e Contábil</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/categoria/software" class="bg-gray-800 p-6 rounded-2xl shadow-md text-white flex items-center justify-between hover:bg-gray-700 transition">
+        <span>Desenvolvimento de Software</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
     </section>
 
   </div>
